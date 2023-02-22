@@ -14,10 +14,11 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Send a message when the command /help is issued."""
-    await update.message.reply_text("Commands:\n/start\n/ruusu  Tuska viiltää rintaa...")
+    await update.message.reply_text("Commands:\n/start\n/ruusu  Tuska viiltää rintaa...\n/help")
 
 async def ruusu(update: Update,context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_message(chat_id=update.effective_chat.id, text="🌹")
+    await context.bot.send_message(chat_id=update.effective_chat.id, text="powi.fi/ruusu")
     await context.bot.send_audio(chat_id=update.effective_chat.id,audio='ruusulaulu.mp3')
 
 
