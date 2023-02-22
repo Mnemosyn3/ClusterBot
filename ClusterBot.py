@@ -1,5 +1,5 @@
 import logging
-import salaisuus.py
+from salaisuus import *
 from telegram import Update
 from telegram.ext import ApplicationBuilder, ContextTypes, CommandHandler
 
@@ -18,3 +18,4 @@ if __name__ == '__main__':
     application.add_handler(start_handler)
     
     application.run_polling()
+
