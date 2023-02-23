@@ -21,6 +21,11 @@ async def ruusu(update: Update,context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_message(chat_id=update.effective_chat.id, text="powi.fi/ruusu")
     await context.bot.send_audio(chat_id=update.effective_chat.id,audio='ruusulaulu.mp3')
 
+async def uliuliuu(update: Update,context: ContextTypes.DEFAULT_TYPE):
+    await context.bot.send_message(chat_id=update.effective_chat.id, text="🌹")
+    await context.bot.send_message(chat_id=update.effective_chat.id, text="powi.fi/ruusu")
+    await context.bot.send_audio(chat_id=update.effective_chat.id,audio='uliuliuu.mp3')
+
 
 if __name__ == '__main__':
     application = ApplicationBuilder().token(secret_token).build()
@@ -28,6 +33,7 @@ if __name__ == '__main__':
     application.add_handler(CommandHandler("start", start))
     application.add_handler(CommandHandler("help", help_command))
     application.add_handler(CommandHandler("ruusu", ruusu))
+    application.add_handler(CommandHandler("uliuliuu", uliuliuu))
 
     application.run_polling()
 
