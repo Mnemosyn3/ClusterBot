@@ -19,12 +19,12 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
 async def ruusu(update: Update,context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_message(chat_id=update.effective_chat.id, text="🌹")
     await context.bot.send_message(chat_id=update.effective_chat.id, text="powi.fi/ruusu")
-    await context.bot.send_audio(chat_id=update.effective_chat.id,audio='ruusulaulu.mp3')
+    await context.bot.send_audio(chat_id=update.effective_chat.id,audio='ruusulaulu.mp3',performer="Pulkkinen",title="Ruusulaulu")
 
 async def uliuliuu(update: Update,context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_message(chat_id=update.effective_chat.id, text="🌹")
     await context.bot.send_message(chat_id=update.effective_chat.id, text="powi.fi/ruusu")
-    await context.bot.send_audio(chat_id=update.effective_chat.id,audio='uliuliuu.mp3')
+    await context.bot.send_audio(chat_id=update.effective_chat.id,audio='uliuliuu.mp3',performer="Pulkkinen",title="Uliuliuu")
 
 
 if __name__ == '__main__':
